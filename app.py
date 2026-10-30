@@ -117,7 +117,7 @@ st.markdown("""
 <div style="text-align: right; font-family: 'Vazirmatn', sans-serif; color: #555; padding: 10px;">
     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
         <img src="https://motarjemshodan.ir/wp-content/uploads/2021/10/cropped-cropped-photo_2021-09-11_13-53-35-50x50.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-        <strong>مترجم‌شدن</strong> | نگاهی دور و نزدیک به ترجمه و حرفه‌ی مترجمی، تلاشی برای آموزش و آشنایی، جهت‌دهی و مشاوره.
+        <strong>مترجم‌شدن</strong> | نگاهی دور و نزدیک به ترجمه و حرفه‌ی مترجمی.
     </div>
     <div style="margin-top: 10px; font-size: 13px;">
         <strong>ارتباط و آموزش‌ها:</strong> 
