@@ -26,6 +26,42 @@ st.markdown("""
     .uploadedFile {
         text-align: right;
     }
+    
+    /* استایل‌های بخش فوتر */
+    .footer-container {
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 1px solid #e0e0e0;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+    .footer-content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .footer-logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .footer-links {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+    .footer-links a {
+        color: #0066cc;
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -74,3 +110,21 @@ if uploaded_file is not None:
             file_name="extracted_images.zip",
             mime="application/zip"
         )
+
+# اضافه شدن بخش فوتر در انتهای صفحه
+st.markdown("""
+<hr style="margin-top: 40px; margin-bottom: 20px;">
+<div style="text-align: right; font-family: 'Vazirmatn', sans-serif; color: #555; padding: 10px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+        <img src="https://motarjemshodan.ir/wp-content/uploads/2021/10/cropped-cropped-photo_2021-09-11_13-53-35-50x50.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+        <strong>مترجم‌شدن</strong> | نگاهی دور و نزدیک به ترجمه و حرفه‌ی مترجمی، تلاشی برای آموزش و آشنایی، جهت‌دهی و مشاوره.
+    </div>
+    <div style="margin-top: 10px; font-size: 13px;">
+        <strong>ارتباط و آموزش‌ها:</strong> 
+        <a href="https://t.me/motarjemshodan" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">کانال تلگرام</a> | 
+        <a href="https://t.me/motarjemshodanG" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">گروه تلگرام</a> | 
+        <a href="http://instagram.com/motarjemshodan" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">اینستاگرام</a> | 
+        <a href="https://yaademy.com/topics/4/%D8%AA%D8%B1%D8%AC%D9%85%D9%87" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">آموزش‌ها</a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
