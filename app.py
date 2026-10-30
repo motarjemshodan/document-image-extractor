@@ -4,8 +4,33 @@ import shutil
 import fitz
 import streamlit as st
 
-st.title("استخراج‌کننده تصاویر از فایل (PDF, Word, EPUB)")
-st.write("فایل خود را آپلود کنید تا تمام تصاویر آن یکجا استخراج شوند.")
+# تنظیمات صفحه و راست‌چین کردن (RTL) به همراه فونت Vazirmatn
+st.set_page_config(page_title="استخراج‌کننده تصاویر", page_icon="🖼️", layout="centered")
+
+st.markdown("""
+    <style>
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+    
+    html, body, [class*="css"] {
+        font-family: 'Vazirmatn', sans-serif;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    /* اصلاح جهت تراز عناصر در استریم‌لیت */
+    .stApp {
+        direction: rtl;
+    }
+    
+    /* راست‌چین کردن دکمه‌ها و عناصر آپلودر */
+    .uploadedFile {
+        text-align: right;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.title("🖼️ استخراج‌کننده تصاویر از فایل")
+st.write("فایل خود (PDF، Word، EPUB و...) را آپلود کنید تا تمام تصاویر آن یکجا استخراج شوند.")
 
 uploaded_file = st.file_uploader("انتخاب فایل", type=['pdf', 'docx', 'epub', 'zip', 'xlsx', 'pptx'])
 
@@ -18,7 +43,6 @@ if uploaded_file is not None:
     file_path = uploaded_file.name
     ext = os.path.splitext(file_path)[1].lower()
     
-    # ذخیره موقت فایل آپلود شده
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
         
@@ -39,7 +63,6 @@ if uploaded_file is not None:
                         pix = fitz.Pixmap(fitz.csRGB, pix)
                     pix.save(os.path.join(output_dir, f"page_{page_index+1}_img_{img_index+1}.png"))
         
-        # ساخت فایل زیپ خروجی
         shutil.make_archive("extracted_images", 'zip', output_dir)
 
     st.success("استخراج با موفقیت انجام شد!")
