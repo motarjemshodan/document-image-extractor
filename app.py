@@ -12,7 +12,7 @@ st.markdown("""
     @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
     
     html, body, [class*="css"] {
-        font-family: 'Vazirmatn', sans-serif;
+        font-family: 'Vazirmatn', Tahoma, sans-serif;
         direction: rtl;
         text-align: right;
     }
