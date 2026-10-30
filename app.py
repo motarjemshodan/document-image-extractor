@@ -22,6 +22,11 @@ st.markdown("""
         direction: rtl;
     }
     
+    /* تنظیمات اختصاصی برای بهبود رندر عناوین */
+    h1, h2, h3 {
+        font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+    }
+    
     /* راست‌چین کردن دکمه‌ها و عناصر آپلودر */
     .uploadedFile {
         text-align: right;
