@@ -121,6 +121,7 @@ st.markdown("""
     </div>
     <div style="margin-top: 10px; font-size: 13px;">
         <strong>ارتباط و آموزش‌ها:</strong> 
+        <a href="https:motarjemshodan.ir" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">وبگاه</a> | 
         <a href="https://t.me/motarjemshodan" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">کانال تلگرام</a> | 
         <a href="https://t.me/motarjemshodanG" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">گروه تلگرام</a> | 
         <a href="http://instagram.com/motarjemshodan" target="_blank" style="text-decoration: none; color: #007acc; margin: 0 5px;">اینستاگرام</a> | 
